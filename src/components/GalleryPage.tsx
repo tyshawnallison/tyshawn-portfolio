@@ -36,14 +36,14 @@ function PairedGallery({
   }
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-1">
       {rows.map((row, rowIdx) => (
         <div
           key={rowIdx}
           className={
             row.length === 1
               ? "flex justify-center"
-              : "grid grid-cols-1 md:grid-cols-2 gap-6"
+              : "grid grid-cols-1 md:grid-cols-2 gap-1"
           }
         >
           {row.map((img) => (
@@ -79,7 +79,7 @@ export function GalleryPage({ category }: { category: Category }) {
 
   return (
     <>
-      <div className="max-w-[1000px] mx-auto px-6 md:px-10 pt-32 md:pt-36 pb-16">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-10 pt-32 md:pt-36 pb-16">
         <h1 className="font-serif text-[clamp(2rem,4vw,3rem)] font-light text-heading uppercase tracking-[0.04em] mb-12">
           {category.title}
         </h1>
@@ -113,8 +113,8 @@ export function GalleryPage({ category }: { category: Category }) {
                 <div
                   className={
                     category.layout === "grid-2col"
-                      ? "grid grid-cols-1 md:grid-cols-2 gap-6"
-                      : "flex flex-col gap-6"
+                      ? "grid grid-cols-1 md:grid-cols-2 gap-1"
+                      : "flex flex-col gap-1"
                   }
                 >
                   {category.images.map((img, i) => (
@@ -151,7 +151,7 @@ export function GalleryPage({ category }: { category: Category }) {
       </div>
 
       {/* You May Also Like */}
-      <div className="max-w-[1000px] mx-auto px-6 md:px-10 py-16 border-t border-border">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-16 border-t border-border">
         <h2 className="font-serif text-xl font-normal text-heading mb-8">
           You may also like
         </h2>

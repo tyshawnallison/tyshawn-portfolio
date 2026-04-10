@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="max-w-[1000px] mx-auto px-6 md:px-10 pt-32 md:pt-36 pb-16">
+    <div className="max-w-[1200px] mx-auto px-6 md:px-10 pt-32 md:pt-36 pb-16">
       <ScrollReveal>
         <header className="mb-12">
           <span className="block text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent mb-3">

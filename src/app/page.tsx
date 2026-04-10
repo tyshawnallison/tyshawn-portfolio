@@ -22,9 +22,11 @@ export default function HomePage() {
             Chicago-Based Model
           </p>
           <h1 className="mt-4 font-serif text-[clamp(2rem,5.5vw,4.5rem)] font-light text-white leading-[1.15] tracking-[0.02em]">
-            Editorial / Commercial
+            Editorial
             <br />
-            / Lifestyle
+            Commercial
+            <br />
+            Lifestyle
           </h1>
           <a
             href="#portfolio"
@@ -39,7 +41,7 @@ export default function HomePage() {
       </section>
 
       {/* Category Grid */}
-      <section id="portfolio" className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 px-10 md:px-16 pt-10">
+      <section id="portfolio" className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 px-0 pt-0">
         {categories.map((cat, i) => (
           <ScrollReveal key={cat.slug} delay={i * 80}>
             <Link href={`/${cat.slug}`} className="group block relative overflow-hidden">
@@ -68,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* Brief intro */}
-      <section className="max-w-[800px] mx-auto px-6 md:px-10 py-24 md:py-32 text-center">
+      <section className="max-w-[900px] mx-auto px-6 md:px-10 py-24 md:py-32 text-center">
         <ScrollReveal>
           <p className="font-serif text-2xl md:text-3xl font-light text-heading leading-relaxed">
             Chicago-based model. Featured in MALVIE Magazine.
