@@ -5,7 +5,7 @@ export interface Category {
   coverImage: string;
   coverAlt: string;
   images: { src: string; alt: string }[];
-  video?: { src: string; fallbackSrc?: string; poster: string };
+  video?: { src: string; poster: string };
   layout: "stacked" | "grid-2col" | "paired";
 }
 
@@ -39,7 +39,6 @@ export const categories: Category[] = [
     images: [],
     video: {
       src: "/images/content-creation/commercial.mp4",
-      fallbackSrc: "/images/content-creation/commercial.mov",
       poster: "/images/content-creation/content-01.jpg",
     },
   },

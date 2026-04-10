@@ -101,9 +101,6 @@ export function GalleryPage({ category }: { category: Category }) {
                       preload="metadata"
                     >
                       <source src={category.video.src} type="video/mp4" />
-                      {category.video.fallbackSrc && (
-                        <source src={category.video.fallbackSrc} type="video/quicktime" />
-                      )}
                     </video>
                   </div>
                 </ScrollReveal>
