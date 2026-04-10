@@ -1,65 +1,124 @@
 import Image from "next/image";
+import Link from "next/link";
+import { categories } from "@/lib/portfolio-data";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <>
+      {/* Hero */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
+          src="/images/hero.jpg"
+          alt="Tyshawn Allison — low-angle portrait, vest, dramatic lighting"
+          fill
+          className="object-cover"
           priority
+          sizes="100vw"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 text-center px-6 flex flex-col items-center">
+          <p className="text-[0.65rem] tracking-[0.3em] uppercase text-white/50 font-sans">
+            Chicago-Based Model
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+          <h1 className="mt-4 font-serif text-[clamp(2rem,5.5vw,4.5rem)] font-light text-white leading-[1.15] tracking-[0.02em]">
+            Editorial / Commercial
+            <br />
+            / Lifestyle
+          </h1>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#portfolio"
+            className="mt-10 border border-white/30 px-10 py-4
+              text-[0.7rem] tracking-[0.3em] uppercase text-white/80
+              hover:bg-white hover:text-black hover:border-white
+              transition-all duration-500 ease-out"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            View Selected Work
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Category Grid */}
+      <section id="portfolio" className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 px-10 md:px-16 pt-10">
+        {categories.map((cat, i) => (
+          <ScrollReveal key={cat.slug} delay={i * 80}>
+            <Link href={`/${cat.slug}`} className="group block relative overflow-hidden">
+              <div className="aspect-[4/5] relative">
+                <Image
+                  src={cat.coverImage}
+                  alt={cat.coverAlt}
+                  fill
+                  className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-105 group-hover:opacity-90"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 md:transition-opacity md:duration-400 max-md:opacity-85">
+                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8">
+                    <h2 className="font-serif text-xl md:text-2xl font-normal text-white drop-shadow-lg">
+                      {cat.title}
+                    </h2>
+                    <p className="text-[0.7rem] tracking-[0.12em] uppercase text-white/60 mt-1">
+                      {cat.year}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </ScrollReveal>
+        ))}
+      </section>
+
+      {/* Brief intro */}
+      <section className="max-w-[800px] mx-auto px-6 md:px-10 py-24 md:py-32 text-center">
+        <ScrollReveal>
+          <p className="font-serif text-2xl md:text-3xl font-light text-heading leading-relaxed">
+            Chicago-based model. Featured in MALVIE Magazine.
+          </p>
+          <p className="mt-6 text-base text-text leading-relaxed max-w-[560px] mx-auto">
+            Open to collaborations, editorial work, brand partnerships, and
+            creative projects.
+          </p>
+        </ScrollReveal>
+      </section>
+
+      {/* Instagram strip */}
+      <section className="border-t border-b border-border py-12 md:py-16">
+        <ScrollReveal>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+            <span className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent">
+              Follow Along
+            </span>
+            <a
+              href="https://www.instagram.com/tyshawn.allison/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 group"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5 text-text group-hover:text-heading transition-colors"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="5" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1.5"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
+              <span className="font-serif text-lg text-heading group-hover:text-accent transition-colors">
+                @tyshawn.allison
+              </span>
+            </a>
+          </div>
+        </ScrollReveal>
+      </section>
+    </>
   );
 }
