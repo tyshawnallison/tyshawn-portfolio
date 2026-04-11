@@ -79,7 +79,7 @@ export function GalleryPage({ category }: { category: Category }) {
 
   return (
     <>
-      <div className="max-w-[1200px] mx-auto px-6 md:px-10 pt-32 md:pt-36 pb-16">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-10 pt-32 md:pt-36 pb-16 bg-[linear-gradient(to_bottom,#0a0a0a_0%,#100e0c_40%,#0a0a0a_100%)]">
         <h1 className="font-serif text-[clamp(2rem,4vw,3rem)] font-light text-heading uppercase tracking-[0.04em] mb-12">
           {category.title}
         </h1>
@@ -151,7 +151,7 @@ export function GalleryPage({ category }: { category: Category }) {
       </div>
 
       {/* You May Also Like */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-16 border-t border-border">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-16 border-t border-border bg-[linear-gradient(to_bottom,#0a0a0a,#0c0c0e)]">
         <h2 className="font-serif text-xl font-normal text-heading mb-8">
           You may also like
         </h2>

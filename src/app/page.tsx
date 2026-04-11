@@ -7,41 +7,41 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-end overflow-hidden">
         <Image
           src="/images/hero.jpg"
-          alt="Tyshawn Allison — low-angle portrait, vest, dramatic lighting"
+          alt="Tyshawn Allison — cornrow hairstyle, staircase, warm golden tones"
           fill
           className="object-cover"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center px-6 flex flex-col items-center">
-          <p className="text-[0.65rem] tracking-[0.3em] uppercase text-white/50 font-sans">
-            Chicago-Based Model
-          </p>
-          <h1 className="mt-4 font-serif text-[clamp(2rem,5.5vw,4.5rem)] font-light text-white leading-[1.15] tracking-[0.02em]">
-            Editorial
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 px-8 md:px-16 pb-20 md:pb-28 max-w-[900px]">
+          <h1 className="font-serif text-[clamp(3rem,8vw,7rem)] font-bold text-white leading-[0.95] tracking-[0.02em] uppercase">
+            Tyshawn
             <br />
-            Commercial
-            <br />
-            Lifestyle
+            Allison
           </h1>
+          <p className="mt-4 font-serif text-[clamp(1.5rem,4vw,3.5rem)] font-light text-white/80 uppercase tracking-[0.06em]">
+            Chicago
+          </p>
+          <p className="mt-3 text-sm text-white/50 font-sans tracking-wide">
+            Editorial. Commercial. Lifestyle.
+          </p>
           <a
             href="#portfolio"
-            className="mt-10 border border-white/30 px-10 py-4
-              text-[0.7rem] tracking-[0.3em] uppercase text-white/80
-              hover:bg-white hover:text-black hover:border-white
-              transition-all duration-500 ease-out"
+            className="mt-8 inline-block bg-accent text-black px-10 py-4
+              text-[0.7rem] tracking-[0.25em] uppercase font-medium
+              hover:opacity-85 transition-opacity duration-300"
           >
-            View Selected Work
+            See Work
           </a>
         </div>
       </section>
 
       {/* Category Grid */}
-      <section id="portfolio" className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 px-0 pt-0">
+      <section id="portfolio" className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 px-0 pt-0 bg-bg">
         {categories.map((cat, i) => (
           <ScrollReveal key={cat.slug} delay={i * 80}>
             <Link href={`/${cat.slug}`} className="group block relative overflow-hidden">
@@ -70,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* Brief intro */}
-      <section className="max-w-[900px] mx-auto px-6 md:px-10 py-24 md:py-32 text-center">
+      <section className="max-w-[900px] mx-auto px-6 md:px-10 py-24 md:py-32 text-center bg-[linear-gradient(to_bottom,#0a0a0a,#0f0f0f)]">
         <ScrollReveal>
           <p className="font-serif text-2xl md:text-3xl font-light text-heading leading-relaxed">
             Chicago-based model. Featured in MALVIE Magazine.
@@ -83,7 +83,7 @@ export default function HomePage() {
       </section>
 
       {/* Instagram strip */}
-      <section className="border-t border-b border-border py-12 md:py-16">
+      <section className="border-t border-b border-border py-12 md:py-16 bg-[linear-gradient(to_bottom,#0f0f0f,#0a0a0a)]">
         <ScrollReveal>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
             <span className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent">

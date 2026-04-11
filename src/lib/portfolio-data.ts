@@ -34,7 +34,7 @@ export const categories: Category[] = [
     title: "Content Creation",
     year: "2025",
     coverImage: "/images/content-creation/content-01.jpg",
-    coverAlt: "Content creation — sitting on stairs, all black outfit",
+    coverAlt: "Content creation — Evolution t-shirt, outdoor golden hour, cornrows",
     layout: "stacked",
     images: [],
     video: {
