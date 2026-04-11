@@ -18,7 +18,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 px-8 md:px-16 pb-20 md:pb-28 max-w-[900px]">
-          <h1 className="font-serif text-[clamp(3rem,8vw,7rem)] font-bold text-white leading-[0.95] tracking-[0.02em] uppercase">
+          <h1 id="hero-name" className="font-serif text-[clamp(3rem,8vw,7rem)] font-bold text-white leading-[0.95] tracking-[0.02em] uppercase">
             Tyshawn
             <br />
             Allison
