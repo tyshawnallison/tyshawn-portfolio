@@ -82,6 +82,41 @@ export default function HomePage() {
         </ScrollReveal>
       </section>
 
+      {/* Testimonials */}
+      <section className="px-6 md:px-10 py-24 md:py-32 bg-[linear-gradient(to_bottom,#0f0f0f,#0a0a0a)]">
+        <div className="max-w-[900px] mx-auto">
+          <ScrollReveal>
+            <h2 className="font-serif text-[0.65rem] tracking-[0.25em] uppercase text-accent text-center mb-16">
+              Testimonials
+            </h2>
+          </ScrollReveal>
+
+          <div className="flex flex-col gap-8">
+            <ScrollReveal delay={80}>
+              <div className="bg-bg-elevated border border-border p-8 md:p-10">
+                <p className="font-serif text-lg md:text-xl text-heading leading-relaxed">
+                  &ldquo;Having to work with Tyshawn as a model was a fun time! Definitely passionate about what he does. Tyshawn is easy to work with. I definitely would recommend him to other photographers 10/10.&rdquo;
+                </p>
+                <p className="mt-6 text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent">
+                  oscarm.photography_
+                </p>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal delay={160}>
+              <div className="bg-bg-elevated border border-border p-8 md:p-10">
+                <p className="font-serif text-lg md:text-xl text-heading leading-relaxed">
+                  &ldquo;I&apos;ve known Tyshawn for a long time and he has shown that he is consistent and reliable when it comes to work. He takes modeling very seriously and would be a great candidate for any brand that needs a model. He&apos;s determined and love to connect with new people!&rdquo;
+                </p>
+                <p className="mt-6 text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent">
+                  films_by_isaac
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Instagram strip */}
       <section className="border-t border-b border-border py-12 md:py-16 bg-[linear-gradient(to_bottom,#0f0f0f,#0a0a0a)]">
         <ScrollReveal>

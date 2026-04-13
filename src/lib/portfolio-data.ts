@@ -50,8 +50,7 @@ export const categories: Category[] = [
     coverAlt: "Studio digitals — side profile headshot",
     layout: "grid-2col",
     images: [
-      { src: "/images/digitals/digitals-03.jpg", alt: "Close-up headshot — direct gaze" },
-      { src: "/images/digitals/digitals-01.jpg", alt: "Side profile — dark tee, studio lighting" },
+{ src: "/images/digitals/digitals-01.jpg", alt: "Side profile — dark tee, studio lighting" },
       { src: "/images/digitals/digitals-04.jpg", alt: "Studio portrait — white tank, arms crossed" },
       { src: "/images/digitals/digitals-05.jpg", alt: "Three-quarter body — white tank, Nike sweats" },
       { src: "/images/digitals/digitals-02.jpg", alt: "Full body comp — black tee, light jeans" },
