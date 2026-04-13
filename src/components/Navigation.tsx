@@ -14,18 +14,27 @@ export function Navigation() {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 60);
-
-      if (isHome) {
-        const heroName = document.getElementById("hero-name");
-        if (heroName) {
-          const rect = heroName.getBoundingClientRect();
-          setPastHeroName(rect.bottom < 0);
-        }
-      }
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Use IntersectionObserver to detect exactly when hero name
+  // scrolls behind the nav bar (rootMargin accounts for nav height)
+  useEffect(() => {
+    if (!isHome) return;
+    const heroName = document.getElementById("hero-name");
+    if (!heroName) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setPastHeroName(!entry.isIntersecting);
+      },
+      { rootMargin: "-80px 0px 0px 0px", threshold: 0 }
+    );
+    observer.observe(heroName);
+    return () => observer.disconnect();
   }, [isHome]);
 
   useEffect(() => {
@@ -71,7 +80,7 @@ export function Navigation() {
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className={`font-serif text-lg md:text-xl font-normal text-heading uppercase tracking-[0.08em] text-center hover:opacity-60 transition-all duration-500 whitespace-nowrap bg-transparent border-none cursor-pointer ${
+          className={`font-serif text-lg md:text-xl font-normal text-heading uppercase tracking-[0.08em] text-center hover:opacity-60 transition-all duration-200 whitespace-nowrap bg-transparent border-none cursor-pointer ${
             isHome && !pastHeroName
               ? "opacity-0 pointer-events-none"
               : "opacity-100"
