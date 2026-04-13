@@ -9,8 +9,8 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative h-screen flex items-end overflow-hidden">
         <Image
-          src="/images/hero.jpg"
-          alt="Tyshawn Allison — cornrow hairstyle, staircase, warm golden tones"
+          src="/images/modeling/modeling-03.jpg"
+          alt="Tyshawn Allison — all black outfit, seated on staircase, warm tones"
           fill
           className="object-cover"
           priority
@@ -69,21 +69,8 @@ export default function HomePage() {
         ))}
       </section>
 
-      {/* Brief intro */}
-      <section className="max-w-[900px] mx-auto px-6 md:px-10 py-24 md:py-32 text-center bg-[linear-gradient(to_bottom,#0a0a0a,#0f0f0f)]">
-        <ScrollReveal>
-          <p className="font-serif text-2xl md:text-3xl font-light text-heading leading-relaxed">
-            Chicago-based model. Featured in MALVIE Magazine.
-          </p>
-          <p className="mt-6 text-base text-text leading-relaxed max-w-[560px] mx-auto">
-            Open to collaborations, editorial work, brand partnerships, and
-            creative projects.
-          </p>
-        </ScrollReveal>
-      </section>
-
       {/* Testimonials */}
-      <section className="px-6 md:px-10 py-24 md:py-32 bg-[linear-gradient(to_bottom,#0f0f0f,#0a0a0a)]">
+      <section className="px-6 md:px-10 py-24 md:py-32 bg-[linear-gradient(to_bottom,#0a0a0a,#0f0f0f)]">
         <div className="max-w-[900px] mx-auto">
           <ScrollReveal>
             <h2 className="font-serif text-[0.65rem] tracking-[0.25em] uppercase text-accent text-center mb-16">
@@ -115,6 +102,19 @@ export default function HomePage() {
             </ScrollReveal>
           </div>
         </div>
+      </section>
+
+      {/* Brief intro */}
+      <section className="max-w-[900px] mx-auto px-6 md:px-10 py-24 md:py-32 text-center bg-[linear-gradient(to_bottom,#0f0f0f,#0a0a0a)]">
+        <ScrollReveal>
+          <p className="font-serif text-2xl md:text-3xl font-light text-heading leading-relaxed">
+            Chicago-based model. Featured in MALVIE Magazine.
+          </p>
+          <p className="mt-6 text-base text-text leading-relaxed max-w-[560px] mx-auto">
+            Open to collaborations, editorial work, brand partnerships, and
+            creative projects.
+          </p>
+        </ScrollReveal>
       </section>
 
       {/* Instagram strip */}
