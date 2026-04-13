@@ -80,7 +80,7 @@ export function Navigation() {
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className={`font-serif text-lg md:text-xl font-normal text-heading uppercase tracking-[0.08em] text-center hover:opacity-60 transition-all duration-200 whitespace-nowrap bg-transparent border-none cursor-pointer ${
+          className={`font-serif text-lg md:text-xl font-normal text-heading uppercase tracking-[0.08em] text-center hover:opacity-60 transition-opacity duration-75 whitespace-nowrap bg-transparent border-none cursor-pointer ${
             isHome && !pastHeroName
               ? "opacity-0 pointer-events-none"
               : "opacity-100"
