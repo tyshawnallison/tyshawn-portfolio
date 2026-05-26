@@ -11,11 +11,13 @@ const testimonials = [
     quote:
       "Having to work with Tyshawn as a model was a fun time! Definitely passionate about what he does. Tyshawn is easy to work with. I definitely would recommend him to other photographers 10/10.",
     name: "oscarm.photography_",
+    href: "https://www.instagram.com/oscarm.photography_/",
   },
   {
     quote:
       "I've known Tyshawn for a long time and he has shown that he is consistent and reliable when it comes to work. He takes modeling very seriously and would be a great candidate for any brand that needs a model. He's determined and love to connect with new people!",
     name: "films_by_isaac",
+    href: "https://www.instagram.com/films_by_isaac/",
   },
 ];
 
@@ -48,9 +50,14 @@ export default function TestimonialsPage() {
                 <p className="font-serif text-lg md:text-xl text-heading leading-relaxed">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <p className="mt-6 text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent">
+                <a
+                  href={t.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 block text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent hover:text-heading transition-colors"
+                >
                   {t.name}
-                </p>
+                </a>
               </div>
             </ScrollReveal>
           ))}
