@@ -71,6 +71,8 @@ export const categories: Category[] = [
       { src: "/images/modeling/modeling-03.jpg", alt: "Staircase — all black, seated" },
       { src: "/images/modeling/modeling-06.jpg", alt: "Golden hour — Evolution graphic tee" },
       { src: "/images/modeling/modeling-04.jpg", alt: "Lifestyle — park, reading" },
+      { src: "/images/modeling/modeling-08.jpg", alt: "Close-up portrait — Diamond windbreaker, locs" },
+      { src: "/images/modeling/modeling-09.jpg", alt: "Riverside — arms crossed, windbreaker, willow tree" },
     ],
   },
 ];
