@@ -64,6 +64,11 @@ export function Navigation() {
         <div className="hidden md:flex items-center gap-10">
           <NavLink href="/" label="Work" active={pathname === "/"} />
           <NavLink
+            href="/collabs"
+            label="Collabs"
+            active={pathname === "/collabs"}
+          />
+          <NavLink
             href="/testimonials"
             label="Testimonials"
             active={pathname === "/testimonials"}
@@ -139,6 +144,13 @@ export function Navigation() {
           className="text-sm tracking-[0.2em] uppercase text-heading"
         >
           Work
+        </Link>
+        <Link
+          href="/collabs"
+          onClick={() => setMenuOpen(false)}
+          className="text-sm tracking-[0.2em] uppercase text-heading"
+        >
+          Collabs
         </Link>
         <Link
           href="/testimonials"
