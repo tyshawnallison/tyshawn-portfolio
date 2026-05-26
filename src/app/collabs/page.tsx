@@ -12,16 +12,17 @@ export const metadata: Metadata = {
 const collabs = [
   {
     src: "/images/collabs/collab-01.jpg",
-    alt: "Collab Shoot 01 — creative direction and visual storytelling",
-    title: "Collab Shoot 01",
-    description: "Creative direction, styling, and visual storytelling.",
+    alt: "Creative shoot with @ensuzyastic",
+    handle: "@ensuzyastic",
+    href: "https://www.instagram.com/ensuzyastic/",
+    description: "Creative shoot.",
   },
   {
     src: "/images/collabs/collab-02.jpg",
-    alt: "Collab Shoot 02 — collaborative visuals built around presence and style",
-    title: "Collab Shoot 02",
-    description:
-      "Collaborative visuals built around presence, detail, and style.",
+    alt: "Styled visuals with @itssaralinda",
+    handle: "@itssaralinda",
+    href: "https://www.instagram.com/itssaralinda/",
+    description: "Styled visuals.",
   },
 ];
 
@@ -54,9 +55,14 @@ export default function CollabsPage() {
                 />
               </div>
               <div className="mt-5">
-                <h2 className="font-serif text-lg text-heading">
-                  {collab.title}
-                </h2>
+                <a
+                  href={collab.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-serif text-lg text-heading hover:text-accent transition-colors"
+                >
+                  {collab.handle}
+                </a>
                 <p className="mt-1 text-sm text-text leading-relaxed">
                   {collab.description}
                 </p>
