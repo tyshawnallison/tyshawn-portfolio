@@ -129,7 +129,7 @@ export function Navigation() {
 
       {/* Mobile menu overlay */}
       <div
-        className={`md:hidden fixed inset-0 flex flex-col items-center justify-center gap-10 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`md:hidden fixed inset-0 flex flex-col items-center justify-center gap-7 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{
