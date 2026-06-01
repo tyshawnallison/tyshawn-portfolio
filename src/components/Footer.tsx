@@ -14,6 +14,24 @@ export function Footer() {
           >
             Work
           </Link>
+          <Link
+            href="/collabs"
+            className="text-[0.7rem] tracking-[0.12em] uppercase text-muted hover:text-heading transition-colors"
+          >
+            Collabs
+          </Link>
+          <Link
+            href="/testimonials"
+            className="text-[0.7rem] tracking-[0.12em] uppercase text-muted hover:text-heading transition-colors"
+          >
+            Testimonials
+          </Link>
+          <Link
+            href="/contact"
+            className="text-[0.7rem] tracking-[0.12em] uppercase text-muted hover:text-heading transition-colors"
+          >
+            Contact
+          </Link>
           <a
             href="https://www.instagram.com/tyshawn.allison/"
             target="_blank"
@@ -22,12 +40,6 @@ export function Footer() {
           >
             Instagram
           </a>
-          <Link
-            href="/contact"
-            className="text-[0.7rem] tracking-[0.12em] uppercase text-muted hover:text-heading transition-colors"
-          >
-            Contact
-          </Link>
         </div>
         <span className="text-[0.7rem] text-muted">&copy; 2026</span>
       </div>
