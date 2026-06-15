@@ -99,6 +99,7 @@ export function GalleryPage({ category }: { category: Category }) {
                       playsInline
                       loop
                       preload="metadata"
+                      poster={category.video.poster}
                     >
                       <source src={category.video.src} type="video/mp4" />
                     </video>

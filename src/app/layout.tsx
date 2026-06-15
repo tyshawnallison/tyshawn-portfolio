@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   description:
     "Tyshawn Allison — Chicago-based model. Publication, modeling, digitals, and content creation portfolio.",
   metadataBase: new URL("https://tyshawn-allison.vercel.app"),
+  other: {
+    "theme-color": "#0a0a0a",
+  },
   openGraph: {
     title: "Tyshawn Allison — Model",
     description:

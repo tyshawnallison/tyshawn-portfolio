@@ -9,5 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/digitals`, lastModified: new Date(), priority: 0.8 },
     { url: `${base}/content-creation`, lastModified: new Date(), priority: 0.8 },
     { url: `${base}/contact`, lastModified: new Date(), priority: 0.7 },
+    { url: `${base}/collabs`, lastModified: new Date(), priority: 0.7 },
+    { url: `${base}/testimonials`, lastModified: new Date(), priority: 0.6 },
   ];
 }

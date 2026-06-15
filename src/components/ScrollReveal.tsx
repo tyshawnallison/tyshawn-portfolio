@@ -40,7 +40,7 @@ export function ScrollReveal({
       className={`transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
         visible
           ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-[30px]"
+          : "opacity-0 translate-y-[20px]"
       } ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
