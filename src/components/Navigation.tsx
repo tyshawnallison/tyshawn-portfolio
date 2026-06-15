@@ -49,87 +49,82 @@ export function Navigation() {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-        scrolled ? "py-3 shadow-[0_1px_0_rgba(255,255,255,0.06)]" : "py-5"
-      }`}
-      style={{
-        background: "rgba(10, 10, 10, 0.85)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-      }}
-    >
-      <div className="flex items-center justify-between px-6 md:grid md:grid-cols-3 md:px-10">
-        {/* Left links — desktop only */}
-        <div className="hidden md:flex items-center gap-10">
-          <NavLink href="/" label="Work" active={pathname === "/"} />
-          <NavLink
-            href="/collabs"
-            label="Collabs"
-            active={pathname === "/collabs"}
-          />
-          <NavLink
-            href="/testimonials"
-            label="Testimonials"
-            active={pathname === "/testimonials"}
-          />
-          <NavLink
-            href="/contact"
-            label="Contact"
-            active={pathname === "/contact"}
-          />
-        </div>
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
+          scrolled ? "py-3 shadow-[0_1px_0_rgba(255,255,255,0.06)]" : "py-5"
+        }`}
+        style={{
+          background: "rgba(10, 10, 10, 0.85)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+        }}
+      >
+        <div className="flex items-center justify-between px-6 lg:grid lg:grid-cols-3 lg:px-10">
+          {/* Left links — desktop only */}
+          <div className="hidden lg:flex items-center gap-8">
+            <NavLink href="/" label="Work" active={pathname === "/"} />
+            <NavLink
+              href="/collabs"
+              label="Collabs"
+              active={pathname === "/collabs"}
+            />
+            <NavLink
+              href="/testimonials"
+              label="Testimonials"
+              active={pathname === "/testimonials"}
+            />
+            <NavLink
+              href="/contact"
+              label="Contact"
+              active={pathname === "/contact"}
+            />
+          </div>
 
-        {/* Center — name */}
-        <button
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-          className={`font-serif text-lg md:text-xl font-normal text-heading uppercase tracking-[0.08em] text-center hover:opacity-60 transition-opacity duration-75 whitespace-nowrap bg-transparent border-none cursor-pointer ${
-            isHome && !pastHeroName
-              ? "opacity-0 pointer-events-none"
-              : "opacity-100"
-          }`}
-        >
-          Tyshawn Allison
-        </button>
-
-        {/* Right — IG icon (desktop) */}
-        <div className="hidden md:flex items-center justify-end">
-          <a
-            href="https://www.instagram.com/tyshawn.allison/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text hover:text-heading transition-colors p-1"
-            aria-label="Instagram"
+          {/* Center — name */}
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className={`font-serif text-lg lg:text-xl font-normal text-heading uppercase tracking-[0.08em] text-center hover:opacity-60 transition-opacity duration-75 whitespace-nowrap bg-transparent border-none cursor-pointer ${
+              isHome && !pastHeroName
+                ? "opacity-0 pointer-events-none"
+                : "opacity-100"
+            }`}
           >
-            <InstagramIcon />
-          </a>
+            Tyshawn Allison
+          </button>
+
+          {/* Right — IG icon (desktop) */}
+          <div className="hidden lg:flex items-center justify-end">
+            <a
+              href="https://www.instagram.com/tyshawn.allison/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text hover:text-heading transition-colors p-1"
+              aria-label="Instagram"
+            >
+              <InstagramIcon />
+            </a>
+          </div>
+
+          {/* Mobile hamburger — hidden when menu open (X button is inside overlay) */}
+          <button
+            onClick={toggleMenu}
+            className={`lg:hidden flex flex-col gap-1.5 p-1 bg-transparent border-none ${
+              menuOpen ? "opacity-0 pointer-events-none" : ""
+            }`}
+            aria-label="Open menu"
+          >
+            <span className="block w-6 h-[1.5px] bg-heading" />
+            <span className="block w-6 h-[1.5px] bg-heading" />
+          </button>
         </div>
+      </nav>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={toggleMenu}
-          className="md:hidden flex flex-col gap-1.5 p-1 bg-transparent border-none z-[51]"
-          aria-label="Toggle menu"
-          aria-expanded={menuOpen}
-        >
-          <span
-            className={`block w-6 h-[1.5px] bg-heading transition-transform duration-300 ${
-              menuOpen ? "translate-y-[3.75px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block w-6 h-[1.5px] bg-heading transition-transform duration-300 ${
-              menuOpen ? "-translate-y-[3.75px] -rotate-45" : ""
-            }`}
-          />
-        </button>
-      </div>
-
-      {/* Mobile menu overlay */}
+      {/* Mobile menu overlay — outside nav to avoid stacking context / iOS fixed-in-fixed bugs */}
       <div
-        className={`md:hidden fixed inset-0 flex flex-col items-center justify-center gap-7 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        className={`lg:hidden fixed inset-0 z-[60] flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
         style={{
@@ -138,6 +133,16 @@ export function Navigation() {
           WebkitBackdropFilter: "blur(30px)",
         }}
       >
+        {/* Close button */}
+        <button
+          onClick={toggleMenu}
+          className="absolute top-5 right-6 p-1 bg-transparent border-none"
+          aria-label="Close menu"
+        >
+          <span className="block w-6 h-[1.5px] bg-heading translate-y-[0.75px] rotate-45" />
+          <span className="block w-6 h-[1.5px] bg-heading -translate-y-[0.75px] -rotate-45" />
+        </button>
+
         <Link
           href="/"
           onClick={() => setMenuOpen(false)}
@@ -175,7 +180,7 @@ export function Navigation() {
           Instagram
         </a>
       </div>
-    </nav>
+    </>
   );
 }
 

@@ -56,9 +56,29 @@ export default function ContactPage() {
           <ContactForm />
         </ScrollReveal>
 
-        {/* Instagram */}
+        {/* Direct email fallback + Instagram */}
         <ScrollReveal delay={400}>
-          <div className="mt-12 pt-12 border-t border-border">
+          <div className="mt-12 pt-12 border-t border-border flex flex-col gap-5">
+            <a
+              href="mailto:tyshawnallison0@gmail.com"
+              className="flex items-center gap-3 group"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5 text-text group-hover:text-heading transition-colors"
+              >
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M22 4L12 13 2 4" />
+              </svg>
+              <span className="font-serif text-lg text-heading group-hover:text-accent transition-colors">
+                tyshawnallison0@gmail.com
+              </span>
+            </a>
             <a
               href="https://www.instagram.com/tyshawn.allison/"
               target="_blank"
