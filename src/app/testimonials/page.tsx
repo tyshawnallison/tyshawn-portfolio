@@ -26,7 +26,7 @@ export default function TestimonialsPage() {
     <div className="max-w-[1200px] mx-auto px-6 md:px-10 pt-32 md:pt-36 pb-16 bg-[linear-gradient(to_bottom,#0a0a0a_0%,#100e0c_40%,#0a0a0a_100%)]">
       <ScrollReveal>
         <header className="mb-12">
-          <span className="block text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent mb-3">
+          <span className="block text-[0.7rem] font-medium tracking-[0.25em] uppercase text-accent mb-3">
             Testimonials
           </span>
           <h1 className="font-serif text-[clamp(2rem,4vw,3rem)] font-light text-heading uppercase tracking-[0.04em]">
@@ -54,7 +54,7 @@ export default function TestimonialsPage() {
                   href={t.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 block text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent hover:text-heading transition-colors"
+                  className="mt-6 block text-[0.7rem] font-medium tracking-[0.25em] uppercase text-accent hover:text-heading transition-colors"
                 >
                   {t.name}
                 </a>

@@ -60,7 +60,7 @@ export function Navigation() {
           WebkitBackdropFilter: "blur(12px)",
         }}
       >
-        <div className="flex items-center justify-between px-6 lg:grid lg:grid-cols-3 lg:px-10">
+        <div className="flex items-center justify-between px-6 lg:grid lg:grid-cols-3 lg:px-10" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
           {/* Left links — desktop only */}
           <div className="hidden lg:flex items-center gap-8">
             <NavLink href="/" label="Work" active={pathname === "/"} />
@@ -136,8 +136,9 @@ export function Navigation() {
         {/* Close button */}
         <button
           onClick={toggleMenu}
-          className="absolute top-5 right-6 p-1 bg-transparent border-none"
+          className="absolute top-5 right-6 p-2 bg-transparent border-none"
           aria-label="Close menu"
+          style={{ top: "calc(1.25rem + env(safe-area-inset-top, 0px))" }}
         >
           <span className="block w-6 h-[1.5px] bg-heading translate-y-[0.75px] rotate-45" />
           <span className="block w-6 h-[1.5px] bg-heading -translate-y-[0.75px] -rotate-45" />
