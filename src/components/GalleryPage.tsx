@@ -55,15 +55,17 @@ function PairedGallery({
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  width={row.length === 1 ? 800 : 500}
-                  height={row.length === 1 ? 600 : 625}
+                  width={row.length === 1 ? 1200 : 800}
+                  height={row.length === 1 ? 1600 : 1000}
                   className="w-full h-auto transition-opacity duration-400 group-hover:opacity-92"
                   sizes={
                     row.length === 1
-                      ? "(max-width: 800px) 100vw, 800px"
+                      ? "(max-width: 1200px) 100vw, 1200px"
                       : "(max-width: 768px) 100vw, 50vw"
                   }
-                  loading={img.index === 0 ? "eager" : "lazy"}
+                  quality={85}
+                  preload={img.index === 0}
+                  loading={img.index === 0 ? undefined : "lazy"}
                 />
               </button>
             </ScrollReveal>
