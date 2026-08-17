@@ -95,18 +95,8 @@ export function Navigation() {
             Tyshawn Allison
           </button>
 
-          {/* Right — IG icon (desktop) */}
-          <div className="hidden lg:flex items-center justify-end">
-            <a
-              href="https://www.instagram.com/tyshawn.allison/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-text hover:text-heading transition-colors p-1"
-              aria-label="Instagram"
-            >
-              <InstagramIcon />
-            </a>
-          </div>
+          {/* Right — empty for grid centering */}
+          <div className="hidden lg:block" />
 
           {/* Mobile hamburger — hidden when menu open (X button is inside overlay) */}
           <button
@@ -172,14 +162,6 @@ export function Navigation() {
         >
           Contact
         </Link>
-        <a
-          href="https://www.instagram.com/tyshawn.allison/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm tracking-[0.2em] uppercase text-heading"
-        >
-          Instagram
-        </a>
       </div>
     </>
   );
@@ -211,20 +193,3 @@ function NavLink({
   );
 }
 
-function InstagramIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="w-[18px] h-[18px]"
-    >
-      <rect x="2" y="2" width="20" height="20" rx="5" />
-      <circle cx="12" cy="12" r="5" />
-      <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" />
-    </svg>
-  );
-}

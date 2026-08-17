@@ -70,20 +70,22 @@ export default function HomePage() {
       </section>
 
       {/* Brief intro */}
-      <section className="max-w-[900px] mx-auto px-6 md:px-10 py-24 md:py-32 text-center bg-[linear-gradient(to_bottom,#0f0f0f,#0a0a0a)]">
+      <section className="px-6 md:px-10 py-16 md:py-20 text-center">
         <ScrollReveal>
-          <p className="font-serif text-2xl md:text-3xl font-light text-heading leading-relaxed">
-            Chicago-based model. Featured in MALVIE Magazine.
-          </p>
-          <p className="mt-6 text-base text-text leading-relaxed max-w-[560px] mx-auto">
-            Open to collaborations, editorial work, brand partnerships, and
-            creative projects.
-          </p>
+          <div className="max-w-[900px] mx-auto">
+            <p className="font-serif text-2xl md:text-3xl font-light text-heading leading-relaxed">
+              Chicago-based model. Featured in MALVIE Magazine.
+            </p>
+            <p className="mt-4 text-base text-text leading-relaxed max-w-[560px] mx-auto">
+              Open to collaborations, editorial work, brand partnerships, and
+              creative projects.
+            </p>
+          </div>
         </ScrollReveal>
       </section>
 
       {/* Instagram strip */}
-      <section className="border-t border-b border-border py-12 md:py-16 bg-[linear-gradient(to_bottom,#0f0f0f,#0a0a0a)]">
+      <section className="py-8 md:py-10">
         <ScrollReveal>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
             <span className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent">
