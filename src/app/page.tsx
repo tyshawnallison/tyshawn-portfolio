@@ -45,7 +45,7 @@ export default function HomePage() {
         {categories.map((cat, i) => (
           <ScrollReveal key={cat.slug} delay={i * 80}>
             <Link href={`/${cat.slug}`} className="group block relative overflow-hidden">
-              <div className="aspect-[4/5] relative">
+              <div className="aspect-[3/4] relative">
                 <Image
                   src={cat.coverImage}
                   alt={cat.coverAlt}
@@ -70,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* Brief intro */}
-      <section className="px-6 md:px-10 py-16 md:py-20 text-center">
+      <section className="px-6 md:px-10 py-12 md:py-16 text-center">
         <ScrollReveal>
           <div className="max-w-[900px] mx-auto">
             <p className="font-serif text-2xl md:text-3xl font-light text-heading leading-relaxed">
@@ -85,7 +85,7 @@ export default function HomePage() {
       </section>
 
       {/* Instagram strip */}
-      <section className="py-8 md:py-10">
+      <section className="py-6 md:py-8">
         <ScrollReveal>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
             <span className="text-[0.65rem] font-medium tracking-[0.25em] uppercase text-accent">
